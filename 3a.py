@@ -22,7 +22,6 @@ def any_punc(line, s_idx, e_idx):
     return any(not c.isdigit() and c != '.' for c in line[s_idx:e_idx])
 
 def is_valid(grid, line_num, start, end):
-    ROWS, COLS = len(grid), len(grid[0])
     is_valid = False
     s_idx = start-1 if start-1 >= 0 else 0
     e_idx = end+1 if end+1 < len(grid[line_num]) else len(grid[line_num])
